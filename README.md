@@ -34,8 +34,4 @@
  + 10万卢布
 ### More Informations
  + If you have a bug to report or have a suggestions, please create a issue on this page.
-<<<<<<< HEAD
  + 如果你需要反馈Bug或者有什么建议，请在这个页面创建一个issue。
-=======
- + 如果你需要反馈Bug或者有什么建议，请在这个页面创建一个issue。
->>>>>>> 1bdb8037b0a6771638ebe77754534c896840b9c0
