@@ -26,7 +26,6 @@ Object.defineProperty(exports, "__esModule", { value: true });
 const ConfigTypes_1 = require("C:/snapshot/project/obj/models/enums/ConfigTypes");
 const MessageType_1 = require("C:/snapshot/project/obj/models/enums/MessageType");
 const baseJson2 = __importStar(require("../db/trader/SimulationSystemTrader/base.json"));
-//
 class Mod {
     preAkiLoad(container) {
         const configServer = container.resolve("ConfigServer");
@@ -85,8 +84,6 @@ class Mod {
             ELocale[TraderID + " Location"] = TraderBase.location;
             ELocale[TraderID + " Description"] = TraderBase.description;
         }
-        CustomLog("View the code on github: https://github.com/HiddenCirno/SystemGift");
-        CustomLog("在GitHub上查看此项目：https://github.com/HiddenCirno/SystemGift");
         const checkUpdate = (url) => {
             const timeout = 5000;
             const currentVersion = '1.0.0';
@@ -110,7 +107,7 @@ class Mod {
                         }
                         else {
                             CustomLog(`Current version (${currentVersion}) is up-to-date. Mod Name: ${ModName}`);
-                            CustomLog(`当前版本（${currentVersion}）已是最新。 模组名称：${ModName}`);
+                            CustomLog(`当前版本（${currentVersion}）已是最新。模组名称：${ModName}`);
                             resolve(null);
                         }
                     });
@@ -139,6 +136,8 @@ class Mod {
                 CustomLog(`You are using the latest version. Mod Name: ${ModName}`);
                 CustomLog(`你正在使用最新版本。模组名称：${ModName}`);
             }
+            CustomLog("View the code on github: https://github.com/HiddenCirno/SystemGift");
+            CustomLog("在GitHub上查看此项目：https://github.com/HiddenCirno/SystemGift");
         })
             .catch((error) => {
             CustomDenied(error);

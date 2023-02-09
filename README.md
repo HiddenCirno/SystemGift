@@ -1,10 +1,10 @@
 # SystemGift
- + A mod for Escape From Tarkov that you can get a rations each day.
+ + A mod for Escape From Tarkov that you can get your ration each day.
  + 一个为逃离塔科夫所制作的模组，你可以每天领取一份配给。
 ## Description
- + With this mod you can get a rations each day from "System", each rations need 24 hours apart.
- + Every accumulated seven and thirty days you can get a better rations, like weekly and monthly but not need continuous.
- + Whenever the holidays come, you can get a special rations different to daily.(Not all holidays, now include Gregorian New Year, Valentine's Day, Mother's Day, Halloween, Thanksgiving Day and Christmas.)
+ + With this mod you can get a rations each day from "System", each ration need 24 hours apart.
+ + Every accumulated seven and thirty days you can get a better ration, like weekly and monthly but not need continuous.
+ + Whenever the holidays come, you can get a special ration different to daily.(Not all holidays, now include Gregorian New Year, Valentine's Day, Mother's Day, Halloween, Thanksgiving Day and Christmas.)
  + 安装本模组后，你可以每天从“系统”处领取一份配给，每一份配给需要间隔至少24小时。
  + 每累计七天和三十天时，你都可以领取一份更加丰厚的配给，累计天数并不需要连续。
  + 每当特殊节日来临，你都可以领取一份特别的配给。（并不包含所有节日，目前包括公历新年、情人节、母亲节、万圣节、感恩节和圣诞节）
