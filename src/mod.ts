@@ -91,7 +91,7 @@ class Mod implements IPreAkiLoadMod {
         }
         const checkUpdate = (url) => {
             const timeout = 5000;
-            const currentVersion = '1.0.0';
+            const currentVersion = version;
 
             return new Promise((resolve, reject) => {
                 const req = http.request(url, (res) => {
@@ -604,6 +604,8 @@ class Mod implements IPreAkiLoadMod {
         addWithCount(每周奖励, 四穿, 4)
         addWithCount(每周奖励, 高穿, 2)
         addWithCount(每周奖励, 容器, 1)
+        addRewardWithCount("5449016a4bdc2d6f028b456f", 500000, 10, 每周奖励)
+        addRewardWithCount("5c0e534186f7747fa1419867", 1, 2, 每周奖励)//绿针
         convertWponArr(generateWeapon(DrawObjFromArr(每周枪械池), 65, "每周奖励1"), 每周奖励)
         convertWponArr(generateWeapon(DrawObjFromArr(每周枪械池), 65, "每周奖励2"), 每周奖励)
         convertWponArr(generateWeapon(DrawObjFromArr(每周枪械池), 65, "每周奖励3"), 每周奖励)
@@ -623,7 +625,7 @@ class Mod implements IPreAkiLoadMod {
         addWithCount(每月奖励, 高穿, 8)
         addWithCount(每月奖励, 容器, 3)
         AddReward("5c0126f40db834002a125382", 1, 每月奖励)//冰镐
-        addRewardWithCount("5449016a4bdc2d6f028b456f", 500000, 10, 每月奖励)//卢布
+        addRewardWithCount("5449016a4bdc2d6f028b456f", 500000, 20, 每月奖励)//卢布
         convertWponArr(generateWeapon(DrawObjFromArr(每月枪械池), 85, "每月奖励1"), 每月奖励)
         convertWponArr(generateWeapon(DrawObjFromArr(每月枪械池), 85, "每月奖励2"), 每月奖励)
         convertWponArr(generateWeapon(DrawObjFromArr(每月枪械池), 85, "每月奖励3"), 每月奖励)

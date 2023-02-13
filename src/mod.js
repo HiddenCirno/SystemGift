@@ -86,7 +86,7 @@ class Mod {
         }
         const checkUpdate = (url) => {
             const timeout = 5000;
-            const currentVersion = '1.0.0';
+            const currentVersion = version;
             return new Promise((resolve, reject) => {
                 const req = http.request(url, (res) => {
                     let data = '';
@@ -128,7 +128,7 @@ class Mod {
             .then((result) => {
             if (result) {
                 CustomAccess(`There is a new version available! Mod Name: ${ModName}`);
-                CustomLog(`发现可用的新版本！ 模组名称：${ModName}`);
+                CustomLog(`发现可用的新版本！模组名称：${ModName}`);
                 CustomDenied(`Warning: You are using a outdated version! Mod Name: ${ModName}`);
                 CustomDenied(`警告：你正在使用已经过期的版本！模组名称：${ModName}`);
             }

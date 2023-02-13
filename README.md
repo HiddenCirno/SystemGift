@@ -32,6 +32,40 @@
  + 2组随机的弹药（穿深不超过50）
  + 2把随机的武器（包括突击卡宾枪、突击步枪、手枪、霰弹枪和冲锋枪，每一把武器上的配件槽及武器上配件的配件槽都有25%的几率生成配件）
  + 10万卢布
+### Weekly Rations Include(Not actually weekly, just cumulative 7 days): 
+ + 4 random syrines
+ + 3 random medic kit
+ + 2 random armor (max level will not over 4)
+ + 3 random tactical vest (not include armor vest)
+ + 2 random backpack (size will not below 25 slots)
+ + 2 random valuables item
+ + 2 random info items
+ + 3 random barter items
+ + 8 random foods
+ + 5 random drinks
+ + 1 random storage containers
+ + 2 eTG-change regenerative stimulant injector
+ + 4 stack ammos (penetration power will not over 50)
+ + 2 stack ammos (penetration power will not below 50)
+ + 4 random weapons(include Assault carbines, Assault rifles, Bolt-action rifles and Machine guns. Each slot in weapons and slot on weapon's mods have 65% to generate item.)
+ + 5m RUB
+### Monthly Rations Include(Not actually monthly, just cumulative 30 days also): 
+ + 10 random syrines
+ + 6 random medic kit
+ + 5 random armor (max level will not over 4)
+ + 3 random tactical vest (not include armor vest)
+ + 6 random backpack (size will not below 25 slots)
+ + 6 random valuables item
+ + 6 random info items
+ + 8 random barter items
+ + 15 random foods
+ + 12 random drinks
+ + 3 random storage containers
+ + 1 Red Rebel ice pick
+ + 12 stack ammos (penetration power will not over 50)
+ + 8 stack ammos (penetration power will not below 50)
+ + 6 random weapons(include Assault rifles, Bolt-action rifles, Marksman rifles, Machine guns and Grenade launchers. Each slot in weapons and slot on weapon's mods have 85% to generate item.)
+ + 10m RUB
 ### More Informations
  + If you have any bugs to report, or have a suggestions, then please create an issue on this page.
  + 如果你需要反馈Bug或者有什么建议，请在这个页面创建一个issue。
