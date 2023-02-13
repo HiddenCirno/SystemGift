@@ -52,12 +52,12 @@ class Mod {
         const Logger = container.resolve("WinstonLogger");
         const PreAkiModLoader = container.resolve("PreAkiModLoader");
         const FuncDatabaseServer = container.resolve("DatabaseServer");
-        const FuncDatabaseImporter = container.resolve("DatabaseImporter");
+        const FuncImporterUtil = container.resolve("ImporterUtil");
         const VFS = container.resolve("VFS");
         const JsonUtil = container.resolve("JsonUtil");
         const ClientDB = FuncDatabaseServer.getTables();
         const ModPath = PreAkiModLoader.getModPath("SystemGift");
-        const DB = FuncDatabaseImporter.loadRecursive(`${ModPath}db/`);
+        const DB = FuncImporterUtil.loadRecursive(`${ModPath}db/`);
         const Locale = ClientDB.locales.global["ch"];
         const ELocale = ClientDB.locales.global["en"];
         const Pack = JsonUtil.deserialize(VFS.readFile(`${ModPath}package.json`));
@@ -127,9 +127,9 @@ class Mod {
         checkUpdate('https://gitee.com/HiddenCirno/version-check/raw/master/SystemGiftVersionCheck.txt')
             .then((result) => {
             if (result) {
-                CustomLog(`There is a new version available. Mod Name: ${ModName}`);
+                CustomAccess(`There is a new version available! Mod Name: ${ModName}`);
+                CustomLog(`发现可用的新版本！ 模组名称：${ModName}`);
                 CustomDenied(`Warning: You are using a outdated version! Mod Name: ${ModName}`);
-                CustomLog(`发现可用的新版本。 模组名称：${ModName}`);
                 CustomDenied(`警告：你正在使用已经过期的版本！模组名称：${ModName}`);
             }
             else {
@@ -162,7 +162,7 @@ class Mod {
         const PreAkiModLoader = container.resolve("PreAkiModLoader");
         const Logger = container.resolve("WinstonLogger");
         const FuncDatabaseServer = container.resolve("DatabaseServer");
-        const FuncDatabaseImporter = container.resolve("DatabaseImporter");
+        const FuncImporterUtil = container.resolve("ImporterUtil");
         const profileHelper = container.resolve("ProfileHelper");
         const VFS = container.resolve("VFS");
         const JsonUtil = container.resolve("JsonUtil");
@@ -171,7 +171,7 @@ class Mod {
         const ModPath = PreAkiModLoader.getModPath("SystemGift");
         const Locale = ClientDB.locales.global["ch"];
         const ELocale = ClientDB.locales.global["en"];
-        const DB = FuncDatabaseImporter.loadRecursive(`${ModPath}db/`);
+        const DB = FuncImporterUtil.loadRecursive(`${ModPath}db/`);
         const Timer = JsonUtil.deserialize(VFS.readFile(`${ModPath}timer.json`));
         //使用跳蚤市场标签创建附件数组
         function CreateArrWithTag(Tag) {

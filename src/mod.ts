@@ -23,7 +23,7 @@ import { NotificationSendHelper } from "@spt-aki/helpers/NotificationSendHelper"
 import { ProfileHelper } from "@spt-aki/helpers/ProfileHelper";
 import { NotifierHelper } from "@spt-aki/helpers/NotifierHelper";
 import { QuestHelper } from "@spt-aki/helpers/QuestHelper";
-import { DatabaseImporter } from "@spt-aki/utils/DatabaseImporter"
+import { ImporterUtil } from "@spt-aki/utils/ImporterUtil"
 import * as baseJson2 from "../db/trader/SimulationSystemTrader/base.json";
 import { BundleLoader } from "@spt-aki/loaders/BundleLoader";
 class Mod implements IPreAkiLoadMod {
@@ -57,12 +57,12 @@ class Mod implements IPreAkiLoadMod {
         const Logger = container.resolve<ILogger>("WinstonLogger");
         const PreAkiModLoader = container.resolve("PreAkiModLoader");
         const FuncDatabaseServer = container.resolve<DatabaseServer>("DatabaseServer");
-        const FuncDatabaseImporter = container.resolve<DatabaseImporter>("DatabaseImporter")
+        const FuncImporterUtil = container.resolve<ImporterUtil>("ImporterUtil")
         const VFS = container.resolve<VFS>("VFS");
         const JsonUtil = container.resolve<JsonUtil>("JsonUtil");
         const ClientDB = FuncDatabaseServer.getTables();
         const ModPath = PreAkiModLoader.getModPath("SystemGift")
-        const DB = FuncDatabaseImporter.loadRecursive(`${ModPath}db/`)
+        const DB = FuncImporterUtil.loadRecursive(`${ModPath}db/`)
         const Locale = ClientDB.locales.global["ch"]
         const ELocale = ClientDB.locales.global["en"]
         const Pack = JsonUtil.deserialize(VFS.readFile(`${ModPath}package.json`));
@@ -136,9 +136,9 @@ class Mod implements IPreAkiLoadMod {
         checkUpdate('https://gitee.com/HiddenCirno/version-check/raw/master/SystemGiftVersionCheck.txt')
             .then((result) => {
                 if (result) {
-                    CustomLog(`There is a new version available. Mod Name: ${ModName}`);
+                    CustomAccess(`There is a new version available! Mod Name: ${ModName}`);
+                    CustomLog(`发现可用的新版本！模组名称：${ModName}`);
                     CustomDenied(`Warning: You are using a outdated version! Mod Name: ${ModName}`);
-                    CustomLog(`发现可用的新版本。 模组名称：${ModName}`);
                     CustomDenied(`警告：你正在使用已经过期的版本！模组名称：${ModName}`);
                 } else {
                     CustomLog(`You are using the latest version. Mod Name: ${ModName}`);
@@ -170,7 +170,7 @@ class Mod implements IPreAkiLoadMod {
         const PreAkiModLoader = container.resolve("PreAkiModLoader");
         const Logger = container.resolve<ILogger>("WinstonLogger");
         const FuncDatabaseServer = container.resolve<DatabaseServer>("DatabaseServer");
-        const FuncDatabaseImporter = container.resolve<DatabaseImporter>("DatabaseImporter")
+        const FuncImporterUtil = container.resolve<ImporterUtil>("ImporterUtil")
         const profileHelper = container.resolve<ProfileHelper>("ProfileHelper");
         const VFS = container.resolve<VFS>("VFS");
         const JsonUtil = container.resolve<JsonUtil>("JsonUtil");
@@ -179,7 +179,7 @@ class Mod implements IPreAkiLoadMod {
         const ModPath = PreAkiModLoader.getModPath("SystemGift")
         const Locale = ClientDB.locales.global["ch"]
         const ELocale = ClientDB.locales.global["en"]
-        const DB = FuncDatabaseImporter.loadRecursive(`${ModPath}db/`)
+        const DB = FuncImporterUtil.loadRecursive(`${ModPath}db/`)
         const Timer = JsonUtil.deserialize(VFS.readFile(`${ModPath}timer.json`));
         //使用跳蚤市场标签创建附件数组
         function CreateArrWithTag(Tag) {
